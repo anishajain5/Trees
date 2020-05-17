@@ -1,0 +1,14 @@
+public int height() {
+	return this.height(this.root);
+}
+
+private int height(Node node) {
+	if(node==null) {
+		return -1;
+	}
+	int lh= height(node.left);
+	int rh= height(node.right);
+	int myans= Math.max(lh, rh)+1;
+	
+	return myans;
+}
