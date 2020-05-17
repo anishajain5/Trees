@@ -1,0 +1,14 @@
+public int min() {
+	return this.min(this.root);
+}
+
+private int min(Node node) {
+	if(node== null) {
+		return Integer.MAX_VALUE;
+	}
+	
+	int lmin= this.min(node.left);
+	int rmin= this.min(node.right);
+	int myans= Math.min(lmin, Math.min(node.data,rmin));
+	return myans;
+}
