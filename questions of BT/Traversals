@@ -1,0 +1,38 @@
+public void pre() {  //preorder
+	this.pre(this.root);
+}
+
+private void pre(Node node) {
+	if(node==null) {
+		return;
+	}
+	System.out.print(node.data+" ");
+	this.pre(node.left);
+	this.pre(node.right);
+}
+
+public void in() {    //inorder
+	this.in(this.root);
+}
+
+private void in(Node node) {
+	if(node==null) {
+		return;
+	}
+	this.in(node.left);
+	System.out.print(node.data+" ");
+	this.in(node.right);
+}
+
+public void post() {   //post order
+	this.post(this.root);
+}
+
+private void post(Node node) {
+	if(node==null) {
+		return;
+	}
+	this.post(node.left);
+	this.post(node.right);
+	System.out.print(node.data);
+}
